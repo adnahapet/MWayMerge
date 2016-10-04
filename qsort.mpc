@@ -1,0 +1,27 @@
+// $Id: qSort.mpc anahapet $
+
+project (qSort) {
+  exename = qSort
+  install = .
+ 
+  Header_Files {
+	mWayMerge.h
+   	qSortRecords.h
+    compareRecords.h
+    record.h
+  }
+
+  Source_Files {
+   main.cpp
+   mWayMerge.cpp
+   qSortRecords.cpp
+   compareRecords.cpp
+   record.cpp
+  }
+
+ 
+
+specific (make) {
+compile_flags += -std=c++0x
+}
+}
